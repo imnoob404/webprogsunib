@@ -3,7 +3,7 @@
 
 Projek webpprog sunib
 
-##Todo
+## Todo
 - Homepage
 - Login
 - Regis
@@ -14,7 +14,7 @@ Projek webpprog sunib
 - Payment
 - Cart
 
-##Optional
+## Optional
 - Histori belanja
 - Wishlist
 - User preferences
