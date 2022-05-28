@@ -1,3 +1,5 @@
+<%@include file="Connect/connect.jsp"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,41 +11,63 @@
     <title>Cart</title>
 </head>
 <body>
-    
-    <div class="Cart">
+    <%
+        String query = "SELECT COUNT(*) FROM cart";
+        ResultSet count = st.executeQuery(query);
 
-        <form action="Payment.jsp" name="Payment">
-            <table>
-                <tr>
-                    <th>Produk</th>
-                    <th>Nama</th>
-                    <th>Kuantitas</th>
-                    <th>Total</th>
-    
-                </tr>
-                <% for(int i=0;i<3;i++){ %>
-    
-                <tr>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>test</td>
-                    <td>5</td>
-                </tr>
-    
-                <% } %>
-                
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>5</td>
-                </tr>
-    
-            </table>
-    
-            <input type="submit" value="CheckOut">
-        </form>
-    </div>
+        ResultSet rs= null;
+        Integer totalData = 0;
+        
+
+        if(count.next()){
+            totalData = Integer.parseInt(count.getString(1)); 
+        }
+
+    %>
+    <form action="Payment.jsp">
+        <table class="table">
+            <tr>
+                <th>Produk</th>
+                <th>Nama</th>
+                <th>Kuantitas</th>
+                <th>Total</th>
+
+            </tr>
+            <% for(int i=1 ; i<=totalData ; i++){ 
+                    query = String.format("SELECT * FROM cart WHERE ID = %s", i);
+
+                    rs = st.executeQuery(query);
+                    rs.next();
+            %>
+
+            <tr>
+                <td>
+                    <img src="Assets/Tokopedia - Fantasy Pet/Toy/Ball toy/WechatIMG388.jpeg"
+                            width="150"
+                            height="150">        
+                </td>
+                <td> <%= rs.getString("Nama") %> </td>
+                <td> <%= rs.getInt("Kuantitas") %> </td>
+                <td> Rp. <%= rs.getInt("Harga") %> </td>
+            </tr>
+
+            <% 
+                Integer total = 0;
+                total+=rs.getInt("Harga");
+                } 
+            %>
+            
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Rp. <%out.println(total);%> </td>
+            </tr>
+
+        </table>
+
+        <input type="submit" value="CheckOut" class="button">
+    </form>
 
 </body>
 </html>

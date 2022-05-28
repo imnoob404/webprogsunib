@@ -1,3 +1,5 @@
+<%@include file="Connect/connect.jsp"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,30 +12,49 @@
     
 </head>
 <body>
+
     <div class="product">
 
-        <% for(int y = 0 ; y<4 ; y++){ %>
+        <%
+            String query = "SELECT COUNT(*) FROM produk";
+            ResultSet count = st.executeQuery(query);
 
-            <div class="row">
-                <% for(int i = 0 ; i<4 ; i++){ %>
+            ResultSet rs= null;
+            Integer totalData = 0;
 
-                    <div class="item">
-                        <a href="DetailProduct.jsp?id=">
-                            <img src="Assets/Tokopedia - Fantasy Pet/Toy/Ball toy/WechatIMG388.jpeg"
-                                width="250"
-                                height="250">
-                            <p>Nama</p>
-                            <p>Harga</p>
-                        </a>
-                
-                    </div>
-
-                <% } %>   
-            </div>
-
-        <% } %>   
-    </div>
+            if(count.next()){
+                totalData = Integer.parseInt(count.getString(1)); 
+            }
+        
+        %>
     
+
+        <div class="row">
+            <%
+                for(int i = 1 ; i<=totalData ; i++){ 
+
+                    query = String.format("SELECT * FROM produk WHERE ID = %d", i);
+                    rs = st.executeQuery(query);
+                    rs.next();
+            %>
+
+                
+
+                <div class="item">
+                    <a href="DetailProduct.jsp?ID=<%= rs.getInt("ID") %>">
+                        <img src="Assets/Tokopedia - Fantasy Pet/Toy/Ball toy/WechatIMG388.jpeg"
+                            width="250"
+                            height="250">
+                        <p>  <%= rs.getString("Nama") %> </p>
+                        <p>  Rp. <%= rs.getInt("Harga") %> </p>
+                    </a>
+            
+                </div>
+
+            <% } %>   
+        </div>
+
+    </div>
     
 
 </body>

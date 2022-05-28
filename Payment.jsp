@@ -1,3 +1,5 @@
+<%@include file="Connect/connect.jsp"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +41,7 @@
         function dropdown() {
             document.getElementById("dropdown_menu").classList.toggle("show");
         }
-        
+      
         // Close the dropdown menu if the user clicks outside of it
         window.onclick = function(event) {
             if (!event.target.matches('.option_pick')) {
