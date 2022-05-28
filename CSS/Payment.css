@@ -1,0 +1,25 @@
+.dropdown_menu{
+    text-align: center;
+
+}
+
+
+.option_pick{
+    border: 5px;
+    border-style: solid;
+    border-color: black;
+    margin: 20px 650px 20px 650px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: beige;
+}
+
+.dropdown_menu{
+    display: none;
+    z-index: 1;
+}
+
+
+
+.show {display:block;}

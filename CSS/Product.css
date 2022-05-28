@@ -1,0 +1,15 @@
+.product{
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.row{
+    margin-left: 450px;
+}
+.item{
+    margin-top: 50px;
+    float: left;
+    width: 22%;
+    padding: 5px;
+    text-align: center;
+}

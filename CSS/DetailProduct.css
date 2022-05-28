@@ -1,0 +1,19 @@
+.Detail_Image{
+    margin-left: 150px;
+}
+
+.Detail_Product{
+    margin-left: 500px;
+    margin-right: 500px;
+    float: left;
+}
+
+.Text_Product{
+    float: right;
+    width: 40%;
+    text-align: center;
+}
+
+.Description{
+    margin-top: 100px;
+}
