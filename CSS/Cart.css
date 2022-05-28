@@ -1,20 +1,15 @@
-.Cart{
-    text-align: center;
-    
+.form{
+    margin: auto;
 }
 
-.table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+.table{
+    margin: auto;
+    border: 15px;
+    border-style: solid;
+    margin-left: 100px;
 }
-  
-.td, .th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-  
-.tr:nth-child(even) {
-    background-color: #dddddd;
+
+.button{
+    margin: auto;
+    color: beige;
 }
