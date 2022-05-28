@@ -39,7 +39,7 @@
         function dropdown() {
             document.getElementById("dropdown_menu").classList.toggle("show");
         }
-        // Kontol gimana dah
+        
         // Close the dropdown menu if the user clicks outside of it
         window.onclick = function(event) {
             if (!event.target.matches('.option_pick')) {
