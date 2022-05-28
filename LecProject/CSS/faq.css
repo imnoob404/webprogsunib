@@ -1,0 +1,57 @@
+
+.about_us{
+    background-color: gray;
+    color: white;
+    margin: auto;
+    text-align: center;
+    height: 250px;
+}
+
+.contact{
+    text-align: center;
+}
+
+.column{
+    float: left;
+    width: 33.3%;
+    height: 200px;
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.dropdown_menu{
+    text-align: center;
+    background-color: grey;
+    color: white;
+    font-size: 20px;
+
+}
+
+
+.faq{
+    text-align: center;
+}
+
+.option_pick p{
+    border: 5px;
+    border-style: solid;
+    border-color: black;
+    margin: 20px 100px 20px 100px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: grey;
+}
+
+.dropdown_menu{
+    display: none;
+    z-index: 1;
+}
+
+
+
+.show {display:block;}
