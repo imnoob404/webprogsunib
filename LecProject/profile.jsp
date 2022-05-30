@@ -9,8 +9,14 @@
 </head>
 <body>
     <div class="profile">
-        <div class="img_avatar">
+        <!-- <div class="img_avatar">
             <img src="asset/cat_avatar.jpg" class="avatar">
+        </div> -->
+
+        <div class="img_avatar">
+            <img src="asset/cat_avatar.jpg" id="getImage">
+            <br>
+            <input type="button" onclick="change_image()" value="Change Image">
         </div>
 
         <div class="profile_user">
@@ -25,4 +31,21 @@
         </div>
     </div>
 </body>
+
+<script>
+    function change_image() {
+        var Image_Id = document.getElementById('getImage');
+        if (Image_Id.src.match("asset/cat_avatar.jpg")) {
+            Image_Id.src = "asset/dog_avatar.jpg";
+        }
+        else if (Image_Id.src.match("asset/dog_avatar.jpg")) {
+            Image_Id.src = "asset/pipel.jpg"
+        }
+        else {
+            Image_Id.src = "asset/cat_avatar.jpg";
+        }
+    }
+</script>
+
+
 </html>

@@ -17,3 +17,14 @@ img {
 .profile_user label{
     font-size: 24px;
 }
+
+.profile_pic{
+    text-align: center;
+    margin: 24px 0 12px 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile{
+    text-align: center;
+}
