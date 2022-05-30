@@ -15,7 +15,7 @@
         String query = "SELECT COUNT(*) FROM cart";
         ResultSet count = st.executeQuery(query);
 
-        ResultSet rs= null;
+        ResultSet rs= null, rs2= null;
         Integer totalData = 0;
         
 
@@ -38,14 +38,25 @@
 
                     rs = st.executeQuery(query);
                     rs.next();
+
+                    String name = rs.getString("Nama");
+                    String query2 = String.format("SELECT * FROM produk WHERE Nama = '%s'", name);
+                    rs2 = st.executeQuery(query2);
+                    rs2.next();
+                    
+
             %>
 
             <tr>
                 <td>
-                    <img src="Assets/Tokopedia - Fantasy Pet/Toy/Ball toy/WechatIMG388.jpeg"
+                    <img src="Assets/<%= rs2.getInt("ID")%>.jpg"
                             width="150"
                             height="150">        
                 </td>
+                <%
+                    rs = st.executeQuery(query);
+                    rs.next();
+                %>
                 <td> <%= rs.getString("Nama") %> </td>
                 <td> <%= rs.getInt("Kuantitas") %> </td>
                 <td> Rp. <%= rs.getInt("Harga") %> </td>
@@ -61,7 +72,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Rp. <%out.println(total);%> </td>
+                <td>Rp. </td>
             </tr>
 
         </table>

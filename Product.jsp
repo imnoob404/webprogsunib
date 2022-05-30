@@ -42,7 +42,7 @@
 
                 <div class="item">
                     <a href="DetailProduct.jsp?ID=<%= rs.getInt("ID") %>">
-                        <img src="Assets/Tokopedia - Fantasy Pet/Toy/Ball toy/WechatIMG388.jpeg"
+                        <img src="Assets/<%= i%>.jpg"
                             width="250"
                             height="250">
                         <p>  <%= rs.getString("Nama") %> </p>

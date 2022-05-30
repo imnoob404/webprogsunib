@@ -27,7 +27,7 @@
                 
             %>
 
-            <img src="Assets/Tokopedia - Fantasy Pet/Toy/Ball toy/WechatIMG386.jpeg"
+            <img src="Assets/<%= rs.getInt("ID")%>.jpg"
                 width="250"
                 height="250"
                 class="Detail_Image">
