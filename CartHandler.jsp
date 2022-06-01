@@ -16,6 +16,7 @@
     Integer total = harga*qty;
 
     
+    
     query = String.format("INSERT INTO cart (Nama, Kuantitas, Harga) VALUES ('%s', %d, %d)", nama, qty, total);
     st.executeUpdate(query);
 

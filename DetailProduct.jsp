@@ -27,7 +27,7 @@
                 
             %>
 
-            <img src="Assets/<%= rs.getInt("ID")%>.jpg"
+            <img src="Assets/Product/<%= rs.getInt("ID")%>.jpg"
                 width="250"
                 height="250"
                 class="Detail_Image">
@@ -45,6 +45,8 @@
 
                 <input type="submit" value="Add To Cart">
 
+                
+
             </div>
 
         </form>
@@ -54,7 +56,7 @@
             <p>Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set
                 Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set
             </p>
-
+            
         </div>  
 
     </div>

@@ -18,9 +18,13 @@
 
 
     <div class="dropdown_menu" id="dropdown_menu">
-        <textarea id="address" rows="5" cols="35"></textarea>
-        <br>
-        <input type="submit" value="OK">
+        <form action="Product.jsp">
+            <textarea id="address" rows="5" cols="35" placeholder="Alamat Pengiriman"></textarea>
+            <br>
+            <input type="submit" value="OK" onclick="ReserCart()">
+
+        </form>
+        
     </div>
 
 
@@ -59,9 +63,16 @@
                 }
             }
         }
-    </script>
-    
 
+        function ReserCart(){
+            <%
+                String query = "DELETE from cart";
+                st.executeUpdate(query);
+                query = "ALTER TABLE cart AUTO_INCREMENT = 1;";
+                st.executeUpdate(query);
+            %>
+        }
+    </script>
       
 
 </body>

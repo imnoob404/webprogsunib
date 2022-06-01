@@ -42,7 +42,7 @@
 
                 <div class="item">
                     <a href="DetailProduct.jsp?ID=<%= rs.getInt("ID") %>">
-                        <img src="Assets/<%= i%>.jpg"
+                        <img src="Assets/Product/<%= i%>.jpg"
                             width="250"
                             height="250">
                         <p>  <%= rs.getString("Nama") %> </p>

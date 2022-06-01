@@ -33,7 +33,9 @@
                 <th>Total</th>
 
             </tr>
-            <% for(int i=1 ; i<=totalData ; i++){ 
+            <% 
+                Integer total = 0;
+                for(int i=1 ; i<=totalData ; i++){ 
                     query = String.format("SELECT * FROM cart WHERE ID = %s", i);
 
                     rs = st.executeQuery(query);
@@ -43,13 +45,12 @@
                     String query2 = String.format("SELECT * FROM produk WHERE Nama = '%s'", name);
                     rs2 = st.executeQuery(query2);
                     rs2.next();
-                    
-
+                
             %>
 
             <tr>
                 <td>
-                    <img src="Assets/<%= rs2.getInt("ID")%>.jpg"
+                    <img src="Assets/Product/<%= rs2.getInt("ID")%>.jpg"
                             width="150"
                             height="150">        
                 </td>
@@ -62,9 +63,8 @@
                 <td> Rp. <%= rs.getInt("Harga") %> </td>
             </tr>
 
-            <% 
-                Integer total = 0;
-                total+=rs.getInt("Harga");
+            <%      
+                    total+=rs.getInt("Harga");
                 } 
             %>
             
@@ -72,7 +72,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Rp. </td>
+                <td>Rp. <%out.println(total);%></td>
             </tr>
 
         </table>
