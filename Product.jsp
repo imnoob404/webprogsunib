@@ -16,7 +16,7 @@
     <div class="product">
 
         <%
-            String query = "SELECT COUNT(*) FROM produk";
+            String query = "SELECT COUNT(*) FROM product";
             ResultSet count = st.executeQuery(query);
 
             ResultSet rs= null;
@@ -33,7 +33,7 @@
             <%
                 for(int i = 1 ; i<=totalData ; i++){ 
 
-                    query = String.format("SELECT * FROM produk WHERE ID = %d", i);
+                    query = String.format("SELECT * FROM product WHERE ID = %d", i);
                     rs = st.executeQuery(query);
                     rs.next();
             %>
@@ -45,8 +45,8 @@
                         <img src="Assets/Product/<%= i%>.jpg"
                             width="250"
                             height="250">
-                        <p>  <%= rs.getString("Nama") %> </p>
-                        <p>  Rp. <%= rs.getInt("Harga") %> </p>
+                        <p>  <%= rs.getString("Name") %> </p>
+                        <p>  Rp. <%= rs.getInt("Price") %> </p>
                     </a>
             
                 </div>

@@ -21,20 +21,20 @@
                 String i = request.getParameter("ID");
                 ResultSet rs = null;
 
-                String query = String.format("SELECT * FROM produk WHERE ID = %s", i);
+                String query = String.format("SELECT * FROM product WHERE ID = %s", i);
                 rs = st.executeQuery(query);
                 rs.next();
                 
             %>
 
-            <img src="Assets/Product/<%= rs.getInt("ID")%>.jpg"
+            <img src="Assets/Product/<%= rs.getInt("id")%>.jpg"
                 width="250"
                 height="250"
                 class="Detail_Image">
 
             <div class="Text_Product">
-                <h1> <%= rs.getString("Nama") %> </h1>
-                <h2> Rp. <%= rs.getString("Harga") %>  </h2>
+                <h1> <%= rs.getString("name") %> </h1>
+                <h2> Rp. <%= rs.getString("price") %>  </h2>
                 <button type="button" onclick="minus()">-</button>
                 
                 <input type="hidden" name="ID" value="<%= Integer.parseInt(request.getParameter("ID")) %>" >
@@ -53,8 +53,7 @@
 
 
         <div class="Description">
-            <p>Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set
-                Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set Lorem ipsum test set
+            <p><%= rs.getString("description") %>
             </p>
             
         </div>  
