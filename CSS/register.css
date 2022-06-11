@@ -6,7 +6,7 @@
     margin-right: auto;
     width: 550px;
     height: 400px;
-    padding-top: auto;
+    margin-top: 10em;
 }
 
 .form_register{
@@ -30,7 +30,7 @@
     color: gray;
 }
 
-img{
+.img_logo{
     margin-top: 15px;
     width: 250px;
     height: 300px;
@@ -41,7 +41,7 @@ img{
 .logo{
     text-align: center;
     float: left;
-    width: 50%;
+    /* width: 50%; */
 }
 
 .form{

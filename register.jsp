@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/register.css">
-    <title>Register</title>
-    <%@include file="Connect/connect.jsp" %>
-</head>
-<body>
-    <div>
+<%@include file="Connect/connect.jsp" %>
+<%@ include file="header.jsp" %>
+
+    <link rel="stylesheet" property="stylesheet" href="CSS/register.css">
+    <div class="container">
         <div class="register">
 
             <h1 class="welcome">Welcome to Fantasy Pet</h1>
@@ -51,8 +44,8 @@
     </script>
 
     <% 
-        String query = String.format("INSERT INTO user (Username, Password, Phone, Email, DOB) VALUES (%s, %s, %s, %s, %s)", username, password, email, phone, date);
-        st.executeUpdate(query);
+        //String query = String.format("INSERT INTO user (Username, Password, Phone, Email, DOB) VALUES (%s, %s, %s, %s, %s)", username, password, email, phone, date);
+        //st.executeUpdate(query);
     %>
 
 </body>
