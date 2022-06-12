@@ -1,3 +1,4 @@
+<%@ include file="header.jsp" %>
 <%@include file="Connect/connect.jsp"%>
 
 <!DOCTYPE html>
@@ -66,6 +67,8 @@
         </div>
 
     </div>
+
+    <%@ include file="footer.jsp" %>
     
 
 </body>

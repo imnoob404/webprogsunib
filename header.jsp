@@ -25,7 +25,7 @@
         <div class="container-fluid">
           <div class="row justify-content-center">
             <div class="col-xl-9 d-flex align-items-center justify-content-lg-between">
-              <a href="index.html" class="logo me-auto me-lg-0"><img src="Assets/logo_small.png" alt="" class="img-fluid"></a>
+              <a href="index.jsp" class="logo me-auto me-lg-0"><img src="Assets/logo_small.png" alt="" class="img-fluid"></a>
               <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                   <li><a class="nav-link scrollto <% if(judul.equals("index")) out.println("active"); %>" href="index.jsp">Home</a></li>
