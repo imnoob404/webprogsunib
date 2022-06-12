@@ -25,30 +25,34 @@
         }
 
     %>
-    <form action="Payment.jsp">
-        <table class="table">
-            <tr>
-                <th>Produk</th>
-                <th>name</th>
-                <th>quantity</th>
-                <th>Total</th>
+   
+    <table class="table">
+        <tr>
+            <th>Produk</th>
+            <th>name</th>
+            <th>quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+            
+        </tr>
+        <% 
+            Integer total = 0;
 
-            </tr>
-            <% 
-                Integer total = 0;
-                for(int i=1 ; i<=totalData ; i++){ 
-                    query = String.format("SELECT * FROM cart WHERE id = %s", i);
-
-                    rs = st.executeQuery(query);
-                    rs.next();
-
-                    String name = rs.getString("name");
-                    String query2 = String.format("SELECT * FROM product WHERE name = '%s'", name);
-                    rs2 = st.executeQuery(query2);
-                    rs2.next();
+            for(int i=1 ; i<=totalData ; i++){ 
                 
-            %>
+                query = String.format("SELECT * FROM cart WHERE id = %d", i);
+                
+                rs = st.executeQuery(query);
+                rs.next();
 
+                String name = rs.getString("name");
+                String query2 = String.format("SELECT * FROM product WHERE name = '%s'", name);
+                rs2 = st.executeQuery(query2);
+                rs2.next();
+            
+        %>
+
+        <form action="CartDeleteHandler.jsp">
             <tr>
                 <td>
                     <img src="Assets/Product/<%= rs2.getInt("id")%>.jpg"
@@ -59,7 +63,9 @@
                     rs = st.executeQuery(query);
                     rs.next();
                 %>
-                <td> <%= rs.getString("name") %> </td>
+                <td> 
+                    <input type="text" name="name" readonly style="border: none;" value="<%= rs.getString("name") %>">
+                </td>
                 <td> 
                     <input type="number" id="qty<%=i%>" onchange="PriceHandler(<%=i%>)" style="width: 50px;" min="1" value="<%= rs.getInt("quantity") %>">
                     
@@ -69,25 +75,36 @@
                     <input type="number" id="price<%=i%>" style="width: 120px; border: none;" readonly value="<%= rs.getInt("price") %>">
                     <input type="hidden" id="baseprice<%=i%>" value="<%= rs.getInt("price") %>">
                 </td>
-            </tr>
-
-            <%      
-                    total+=rs.getInt("price");
-                } 
-            %>
-            
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>Rp. 
-                    <input type="number" style="width: 150px; border: none;" id="totalprice" readonly value="<%=total%>">
+                <td> 
                     
+                        <input type="submit" value="Delete" >
+                    
+                
                 </td>
+
             </tr>
+        </form>
 
-        </table>
+        <%      
+                total+=rs.getInt("price");
+            } 
+        %>
+        
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Rp. 
+                <input type="number" style="width: 150px; border: none;" id="totalprice" readonly value="<%=total%>">
+                
+            </td>
+            <td> </td>
+        </tr>
 
+
+    </table>
+
+    <form action="Payment.jsp">
         <input type="submit" value="CheckOut" class="button">
     </form>
 
