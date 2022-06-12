@@ -17,7 +17,7 @@
         <div class="column left">
             <a href="#" class="menu">Foods</a> <br>
             <a href="#" class="menu">Toys</a> <br>
-            <a href="#" class="menu">Healthcare</a>
+            <a href="#" class="menu">Healthcared</a>
         </div>
 
     
