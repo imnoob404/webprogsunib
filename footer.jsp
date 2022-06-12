@@ -1,7 +1,7 @@
 <footer id="footer">
     <div class="container">
       <h3>Fantasy Pet</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <p>Toko beroperasi pukul 19:00-23:59 WIB. Pesanan yang lewat pukul 23:59 akan diproses saat toko beroperasi kembali.</p>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bx-envelope"></i></a>
         <a href="#" class="facebook"><i class="bx bx-phone-call"></i></a>
