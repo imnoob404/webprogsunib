@@ -66,7 +66,7 @@
                 </td>
 
                 <td> Rp. 
-                    <input type="number" id="price<%=i%>" style="width: 120px;" value="<%= rs.getInt("price") %>">
+                    <input type="number" id="price<%=i%>" style="width: 120px; border: none;" readonly value="<%= rs.getInt("price") %>">
                     <input type="hidden" id="baseprice<%=i%>" value="<%= rs.getInt("price") %>">
                 </td>
             </tr>
@@ -80,7 +80,10 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Rp. <%out.println(total);%></td>
+                <td>Rp. 
+                    <input type="number" style="width: 150px; border: none;" id="totalprice" readonly value="<%=total%>">
+                    
+                </td>
             </tr>
 
         </table>
@@ -93,11 +96,15 @@
             
             var qty = parseInt(document.getElementById("qty"+id).value)
             var baseprice = parseInt(document.getElementById("baseprice"+id).value)
+            var oldprice = parseInt(document.getElementById("price"+id).value)
+            var total = parseInt(document.getElementById("totalprice").value)
+            
             var newprice = qty*baseprice
 
-            
+            total = total - oldprice + newprice
 
             document.getElementById("price"+id).value = newprice;
+            document.getElementById("totalprice").value = total;
             
         }
         
