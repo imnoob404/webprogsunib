@@ -15,9 +15,9 @@
 
     <div class="temp">
         <div class="column left">
-            <a href="#">Foods</a> <br>
-            <a href="#">Toys</a> <br>
-            <a href="#">Healthcare</a>
+            <a href="#" class="menu">Foods</a> <br>
+            <a href="#" class="menu">Toys</a> <br>
+            <a href="#" class="menu">Healthcared</a>
         </div>
 
     

@@ -24,7 +24,7 @@ div.left{
     width: 25%;
     position: sticky;
     top: 0;
-    height: 1000px;
+    height: 900px;
 }
 
 .temp:after {
@@ -34,8 +34,8 @@ div.left{
 }
 
 a:link, a:visited {
-    background-color: #f44336;
-    color: white;
+    background-color: white;
+    color: black;
     padding: 14px 25px;
     text-align: center;
     text-decoration: none;
@@ -44,5 +44,10 @@ a:link, a:visited {
   }
   
   a:hover, a:active {
-    background-color: red;
+    background-color: grey;
+  }
+
+  a.menu{
+    background-color: blue;
+    margin: 10px 10px 10px 10px;
   }
