@@ -1,4 +1,5 @@
 .Detail_Image{
+    margin-top: 10em;
     margin-left: 150px;
 }
 
@@ -9,6 +10,7 @@
 }
 
 .Text_Product{
+    margin-top: 10em;
     float: right;
     width: 40%;
     text-align: center;

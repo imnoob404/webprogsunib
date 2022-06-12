@@ -3,13 +3,12 @@
 }
 
 .table{
-    margin: auto;
-    border: 15px;
+    margin-top: 10em;
+    border: 4px;
     border-style: solid;
-    margin-left: 100px;
 }
 
 .button{
     margin: auto;
-    color: beige;
+    color: black;
 }

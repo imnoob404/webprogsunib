@@ -1,3 +1,4 @@
+<%@ include file="header.jsp" %>
 <%@include file="Connect/connect.jsp"%>
 
 <!DOCTYPE html>
@@ -59,8 +60,15 @@
                     rs.next();
                 %>
                 <td> <%= rs.getString("name") %> </td>
-                <td> <%= rs.getInt("quantity") %> </td>
-                <td> Rp. <%= rs.getInt("price") %> </td>
+                <td> 
+                    <input type="number" id="qty<%=i%>" onchange="PriceHandler(<%=i%>)" style="width: 50px;" min="1" value="<%= rs.getInt("quantity") %>">
+                    
+                </td>
+
+                <td> Rp. 
+                    <input type="number" id="price<%=i%>" style="width: 120px; border: none;" readonly value="<%= rs.getInt("price") %>">
+                    <input type="hidden" id="baseprice<%=i%>" value="<%= rs.getInt("price") %>">
+                </td>
             </tr>
 
             <%      
@@ -72,7 +80,10 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Rp. <%out.println(total);%></td>
+                <td>Rp. 
+                    <input type="number" style="width: 150px; border: none;" id="totalprice" readonly value="<%=total%>">
+                    
+                </td>
             </tr>
 
         </table>
@@ -80,5 +91,27 @@
         <input type="submit" value="CheckOut" class="button">
     </form>
 
+    <script>
+        function PriceHandler(id){
+            
+            var qty = parseInt(document.getElementById("qty"+id).value)
+            var baseprice = parseInt(document.getElementById("baseprice"+id).value)
+            var oldprice = parseInt(document.getElementById("price"+id).value)
+            var total = parseInt(document.getElementById("totalprice").value)
+            
+            var newprice = qty*baseprice
+
+            total = total - oldprice + newprice
+
+            document.getElementById("price"+id).value = newprice;
+            document.getElementById("totalprice").value = total;
+            
+        }
+        
+
+
+    </script>
+
+<%@ include file="footer.jsp" %>
 </body>
 </html>
