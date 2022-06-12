@@ -18,7 +18,6 @@
             <a href="#">Foods</a> <br>
             <a href="#">Toys</a> <br>
             <a href="#">Healthcare</a>
-            
         </div>
 
     
