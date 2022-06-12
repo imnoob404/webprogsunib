@@ -13,45 +13,57 @@
 </head>
 <body>
 
-    <div class="product">
+    <div class="temp">
+        <div class="column left">
+            <a href="#">Foods</a> <br>
+            <a href="#">Toys</a> <br>
+            <a href="#">Healthcare</a>
+            
+        </div>
 
-        <%
-            String query = "SELECT COUNT(*) FROM product";
-            ResultSet count = st.executeQuery(query);
-
-            ResultSet rs= null;
-            Integer totalData = 0;
-
-            if(count.next()){
-                totalData = Integer.parseInt(count.getString(1)); 
-            }
-        
-        %>
     
 
-        <div class="row">
+        <div class="column product">
+
             <%
-                for(int i = 1 ; i<=totalData ; i++){ 
+                String query = "SELECT COUNT(*) FROM product";
+                ResultSet count = st.executeQuery(query);
 
-                    query = String.format("SELECT * FROM product WHERE ID = %d", i);
-                    rs = st.executeQuery(query);
-                    rs.next();
-            %>
+                ResultSet rs= null;
+                Integer totalData = 0;
 
-                
-
-                <div class="item">
-                    <a href="DetailProduct.jsp?ID=<%= rs.getInt("ID") %>">
-                        <img src="Assets/Product/<%= i%>.jpg"
-                            width="250"
-                            height="250">
-                        <p>  <%= rs.getString("Name") %> </p>
-                        <p>  Rp. <%= rs.getInt("Price") %> </p>
-                    </a>
+                if(count.next()){
+                    totalData = Integer.parseInt(count.getString(1)); 
+                }
             
-                </div>
+            %>
+        
 
-            <% } %>   
+            <div class="row">
+                <%
+                    for(int i = 1 ; i<=totalData ; i++){ 
+
+                        query = String.format("SELECT * FROM product WHERE ID = %d", i);
+                        rs = st.executeQuery(query);
+                        rs.next();
+                %>
+
+                    
+
+                    <div class="item">
+                        <a href="DetailProduct.jsp?ID=<%= rs.getInt("ID") %>">
+                            <img src="Assets/Product/<%= i%>.jpg"
+                                width="250"
+                                height="250">
+                            <p>  <%= rs.getString("Name") %> </p>
+                            <p>  Rp. <%= rs.getInt("Price") %> </p>
+                        </a>
+                
+                    </div>
+
+                <% } %>   
+            </div>
+
         </div>
 
     </div>
