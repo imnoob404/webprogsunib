@@ -14,6 +14,7 @@
     </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/boxicons/css/boxicons.min.css" rel="stylesheet">
 
 </head>
 <body>
