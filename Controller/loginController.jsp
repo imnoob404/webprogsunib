@@ -16,5 +16,5 @@
     }
     
     
-    response.sendRedirect("/webprogsunib/index.jsp");
+    response.sendRedirect("/index.jsp");
 %>
