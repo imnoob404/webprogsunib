@@ -34,7 +34,7 @@
         </div>
     
         <div class="dropdown_menu" id="dropdown_menu">
-            <p>Makanan, obat, mainan dan peralatan untuk anjing dan kucing. </p>
+            <p>Makanan, obat, mainan dan peralatan untuk anjing dan kucing.</p>
         </div>
     
         <div class="option_pick" onclick="dropdown2()">
