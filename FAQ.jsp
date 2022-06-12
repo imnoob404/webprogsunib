@@ -30,27 +30,27 @@
     <div class="faq">
         <h1>FAQ</h1>
         <div class="option_pick" onclick="dropdown()">
-            <p>Q1: Kenapa Kelvin masuk IT-Mat?</p>
+            <p>Q1: Di sini jual apa saja min?</p>
         </div>
     
         <div class="dropdown_menu" id="dropdown_menu">
-            <p>Karna dikira enak bisa dapat 2 gelar</p>
+            <p>Makanan, obat, mainan dan peralatan untuk anjing dan kucing. </p>
         </div>
     
         <div class="option_pick" onclick="dropdown2()">
-            <p>Q2: Kenapa Kelvin makan bubur pakai tangan? </p>
+            <p>Q2: Apakah pengiriman bisa keluar kota? </p>
         </div>
 
         <div class="dropdown_menu" id="dropdown_menu2">
-            <p>Karna malas dan anaknya jorok</p>
+            <p>Pengiriman dapat dikirim ke seluruh Indonesia.</p>
         </div>
     
         <div class="option_pick" onclick="dropdown3()">
-            <p>Q3: Kenapa Kelvin suka lagu dangdut?</p>
+            <p>Q3: Apakah barang yang rusak dapat dilakukan refund?</p>
         </div>
 
         <div class="dropdown_menu" id="dropdown_menu3">
-            <p>Karna waktu dalam kandungan didengarkan lagu dangdut melulu</p>
+            <p>Jika rusak dalam pengiriman maka bukan tanggung jawab kami lagi.</p>
         </div>
 
     </div>
