@@ -1,3 +1,4 @@
+<%@ include file="header.jsp" %>
 <%@include file="Connect/connect.jsp"%>
 
 <!DOCTYPE html>
@@ -59,8 +60,15 @@
                     rs.next();
                 %>
                 <td> <%= rs.getString("name") %> </td>
-                <td> <%= rs.getInt("quantity") %> </td>
-                <td> Rp. <%= rs.getInt("price") %> </td>
+                <td> 
+                    <input type="number" id="qty@(<%= rs.getInt("v") %>)" onchange="PriceHandler()" style="width: 50px;" min="1" value="<%= rs.getInt("quantity") %>">
+                    
+                </td>
+
+                <td> Rp. 
+                    <input type="number" id="price@(<%= rs.getInt("id") %>)" style="width: 120px;" value="<%= rs.getInt("price") %>">
+                    <input type="hidden" id="baseprice@(<%= rs.getInt("id") %>)" value="<%= rs.getInt("price") %>">
+                </td>
             </tr>
 
             <%      
@@ -80,5 +88,20 @@
         <input type="submit" value="CheckOut" class="button">
     </form>
 
+    <script>
+        function PriceHandler(){
+            var qty = parseInt(document.getElementById("qty").value)
+            var baseprice = parseInt(document.getElementById("baseprice").value)
+            var newprice = qty*baseprice
+
+            document.getElementById("price").value = newprice;
+            
+        }
+        
+
+
+    </script>
+
+<%@ include file="footer.jsp" %>
 </body>
 </html>
