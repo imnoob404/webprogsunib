@@ -29,7 +29,7 @@
               <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                   <li><a class="nav-link scrollto <% if(judul.equals("index")) out.println("active"); %>" href="index.jsp">Home</a></li>
-                  <li><a class="nav-link scrollto <% if(judul.equals("Product")) out.println("active"); %></a>" href="Product.jsp">Shop</a></li>
+                  <li><a class="nav-link scrollto <% if(judul.equals("Product")) out.println("active"); %></a>" href="Product.jsp?">Shop</a></li>
                   <li><a class="nav-link scrollto <% if(judul.equals("Payment")) out.println("active"); %></a>" href="ShoppingCart.jsp">Cart</a></li>
                   <li><a class="nav-link scrollto <% if(judul.equals("FAQ")) out.println("active"); %></a>" href="FAQ.jsp">Contact</a></li>
                 </ul>
