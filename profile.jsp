@@ -26,6 +26,10 @@
             <label for="dob"><b>Date of Birth</b></label>
             <p>asd</p>
         </div>
+
+        <div class="logout">
+            <a href="logout.jsp">Logout</a>
+        </div>
     </div>
 </body>
 

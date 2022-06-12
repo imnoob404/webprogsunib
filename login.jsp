@@ -15,14 +15,14 @@
                 <p>Login</p>
                 <br>
                 <br>
-                <form method="post">
+                <form action="Controller/loginController.jsp" method="post">
                     <input type="text" name="username" placeholder="Username" required> <br>
                     <br>
                     <br>
                     <input type="password" name="password" placeholder="Password" required> <br>
                     <br>
                     <br>
-                    <input type="submit" name="simpan" value="Login">
+                    <input type="submit" name="login" value="Login">
                     <br>
                     <br>
                     <br>
