@@ -34,7 +34,21 @@
                   <li><a class="nav-link scrollto <% if(judul.equals("FAQ")) out.println("active"); %></a>" href="FAQ.jsp">Contact</a></li>
                 </ul>
               </nav>
+              <%
+                  if(session.getAttribute("user_username") == null){
+              %>
               <a href="login.jsp" class="get-started-btn scrollto">Login/Register</a>
+
+              <%
+                  }else{
+              %>
+
+              <a href="profile.jsp" class="get-started-btn scrollto"><%out.println(session.getAttribute("user_username"));%></a>
+
+              <%
+                  }
+              %>
+
             </div>
           </div>
         </div>

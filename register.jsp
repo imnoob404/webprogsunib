@@ -14,7 +14,7 @@
             <div class="form">
                 <div class="form_register">    
                     <p>Register</p>
-                    <form method="post" action="login.jsp">
+                    <form action="Controller/registerController.jsp" method="post">
                         <input type="text" name="username" placeholder="Username" required> <br>
                         <br>
                         <input type="password" name="password" placeholder="Password" required> <br>
@@ -35,17 +35,6 @@
         </div>
     </div>
 
-    <script>
-        let username = document.getElementsByName("username");
-        let password = document.getElementsByName("password");
-        let email = document.getElementsByName("email");
-        let phone = document.getElementsByName("phone");
-        let date = document.getElementsByName("dob");
-    </script>
 
-    <% 
-        //String query = String.format("INSERT INTO user (Username, Password, Phone, Email, DOB) VALUES (%s, %s, %s, %s, %s)", username, password, email, phone, date);
-        //st.executeUpdate(query);
-    %>
 
 <%@ include file="footer.jsp" %>
