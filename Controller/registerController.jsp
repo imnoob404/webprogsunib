@@ -10,5 +10,5 @@
     String query = String.format("INSERT INTO account (id, username, password, email, phone, dob) VALUES (0,'%s','%s','%s','%s','%s')", username, password, email, phone, date);
 
     st.executeUpdate(query);
-    response.sendRedirect("/webprogsunib/login.jsp");
+    response.sendRedirect("/login.jsp");
 %>
