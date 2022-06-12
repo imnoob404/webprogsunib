@@ -61,13 +61,13 @@
                 %>
                 <td> <%= rs.getString("name") %> </td>
                 <td> 
-                    <input type="number" id="qty@(<%= rs.getInt("v") %>)" onchange="PriceHandler()" style="width: 50px;" min="1" value="<%= rs.getInt("quantity") %>">
+                    <input type="number" id="qty<%=i%>" onchange="PriceHandler(<%=i%>)" style="width: 50px;" min="1" value="<%= rs.getInt("quantity") %>">
                     
                 </td>
 
                 <td> Rp. 
-                    <input type="number" id="price@(<%= rs.getInt("id") %>)" style="width: 120px;" value="<%= rs.getInt("price") %>">
-                    <input type="hidden" id="baseprice@(<%= rs.getInt("id") %>)" value="<%= rs.getInt("price") %>">
+                    <input type="number" id="price<%=i%>" style="width: 120px;" value="<%= rs.getInt("price") %>">
+                    <input type="hidden" id="baseprice<%=i%>" value="<%= rs.getInt("price") %>">
                 </td>
             </tr>
 
@@ -89,12 +89,15 @@
     </form>
 
     <script>
-        function PriceHandler(){
-            var qty = parseInt(document.getElementById("qty").value)
-            var baseprice = parseInt(document.getElementById("baseprice").value)
+        function PriceHandler(id){
+            
+            var qty = parseInt(document.getElementById("qty"+id).value)
+            var baseprice = parseInt(document.getElementById("baseprice"+id).value)
             var newprice = qty*baseprice
 
-            document.getElementById("price").value = newprice;
+            
+
+            document.getElementById("price"+id).value = newprice;
             
         }
         
