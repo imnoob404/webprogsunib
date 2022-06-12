@@ -1,7 +1,7 @@
 
 <%@ include file="header.jsp" %>
 <%@include file="Connect/connect.jsp" %>
-    <div class="container">
+    <div class="container containermain">
     <div class="login">
         <link rel="stylesheet" property="stylesheet" href="CSS/login.css">
         <h1 class="welcome">Welcome to Fantasy Pet</h1>
@@ -36,5 +36,4 @@
     </div>
     </div>
 
-</body>
-</html>
+<%@ include file="footer.jsp" %>

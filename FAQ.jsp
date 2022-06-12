@@ -1,5 +1,5 @@
 <%@ include file="header.jsp" %>
-    <div class="container">
+    <div class="container containermain">
     <link rel="stylesheet" property="stylesheet" href="CSS/faq.css">
     <div class="about_us">
         <h1>About Us</h1>
@@ -118,5 +118,4 @@
         }
     </script>
 </div>
-</body>
-</html>
+<%@ include file="footer.jsp" %>

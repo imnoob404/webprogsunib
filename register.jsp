@@ -48,5 +48,4 @@
         //st.executeUpdate(query);
     %>
 
-</body>
-</html>
+<%@ include file="footer.jsp" %>
