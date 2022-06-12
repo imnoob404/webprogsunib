@@ -80,7 +80,7 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Rp. 1
+                <td>Rp. 
                     <input type="number" style="width: 150px; border: none;" id="totalprice" readonly value="<%=total%>">
                     
                 </td>
