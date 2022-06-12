@@ -1,3 +1,5 @@
+<%@ include file="header.jsp" %>
+<%@include file="Connect/connect.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,45 +10,46 @@
     <title>Profile</title>
 </head>
 <body>
+
+    <%
+        String query = "SELECT * FROM account WHERE username = 'admin2'";
+        ResultSet rs = st.executeQuery(query);
+        rs.next();
+    
+    %>
     <div class="profile">
 
         <div class="img_avatar">
-            <img src="Assets/Profile_Pic/cat_avatar.jpg" id="getImage">
+            <img src="Assets/Profile_Pic/<%= rs.getString("image")%>.jpg" id="getImage">
             <br>
-            <input type="button" onclick="change_image()" value="Change Image">
+            <form action="ProfilePicHandler.jsp?">
+                <input type="hidden" name="name" value="<%=rs.getString("username")%>">
+                <input type="submit" value="Change Image">
+            </form>
+            
         </div>
 
         <div class="profile_user">
             <label for="username"><b>Username</b></label>
-            <p>asd</p>
+            <p><%=rs.getString("username")%></p>
             <label for="phone"><b>Phone Number</b></label>
-            <p>asd</p>
+            <p><%=rs.getString("phone")%></p>
             <label for="email"><b>Email</b></label>
-            <p>asd</p>
+            <p><%=rs.getString("email")%></p>
             <label for="dob"><b>Date of Birth</b></label>
-            <p>asd</p>
+            <p><%=rs.getString("dob")%></p>
         </div>
 
-        <div class="logout">
-            <a href="logout.jsp">Logout</a>
-        </div>
+
+        <form action="ChangePass.jsp" method="get">
+            <input type="hidden" name="name" value="<%=rs.getString("username")%>">
+            <input type="submit" value="Change Password">
+        </form>
+
+
+        <a href="logout.jsp">Logout</a>
     </div>
 </body>
 
-<script>
-    function change_image() {
-        var Image_Id = document.getElementById('getImage');
-        if (Image_Id.src.match("Assets/Profile_Pic/cat_avatar.jpg")) {
-            Image_Id.src = "Assets/Profile_Pic/dog_avatar.jpg";
-        }
-        else if (Image_Id.src.match("Assets/Profile_Pic/dog_avatar.jpg")) {
-            Image_Id.src = "Assets/Profile_Pic/pipel.jpg"
-        }
-        else {
-            Image_Id.src = "Assets/Profile_Pic/cat_avatar.jpg";
-        }
-    }
-</script>
-
-
+<%@ include file="footer.jsp" %>
 </html>

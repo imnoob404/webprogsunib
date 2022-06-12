@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2022 at 09:22 AM
+-- Generation Time: Jun 12, 2022 at 05:10 PM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fantasy_pet`
+-- Database: `fantasypet`
 --
 
 -- --------------------------------------------------------
@@ -33,16 +33,17 @@ CREATE TABLE `account` (
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
-  `dob` date NOT NULL
+  `dob` date NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `account`
 --
 
-INSERT INTO `account` (`id`, `username`, `password`, `email`, `phone`, `dob`) VALUES
-(1, 'admin', 'admin', 'admin@gmail.com', '08169696969', '2022-12-06'),
-(2, 'admin2', 'admin2', 'admin2@gmail.com', '08165123123', '2022-06-12');
+INSERT INTO `account` (`id`, `username`, `password`, `email`, `phone`, `dob`, `image`) VALUES
+(1, 'admin', 'admin', 'admin@gmail.com', '08169696969', '2022-12-06', 'cat_avatar'),
+(2, 'admin2', 'admin2', 'admin2@gmail.com', '08165123123', '2022-06-12', 'pipel');
 
 --
 -- Indexes for dumped tables
