@@ -19,7 +19,7 @@
 
         String password = rs.getString("password");
     %>
-    <form action="ChangePassHandler.jsp" method="post" class="form">
+    <form action="Controller/ChangePassHandler.jsp" method="post" class="form">
         <Table class="Table">
             <tr>
                 <td>Old Password</td>

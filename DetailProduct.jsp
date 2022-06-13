@@ -16,7 +16,7 @@
     <div class="Detail_Product">
         
 
-        <form action="CartHandler.jsp" name="cart">
+        <form action="Controller/CartHandler.jsp" name="cart">
 
             <%
                 String i = request.getParameter("ID");

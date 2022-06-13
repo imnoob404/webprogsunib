@@ -17,7 +17,7 @@
 
     <h1 style="text-align: center; text-decoration: underline;">Edit Product</h1> <br>
     
-    <form action="EditHandler.jsp">
+    <form action="Controller/EditHandler.jsp">
     <%
         Integer id = Integer.parseInt(request.getParameter("id"));
 

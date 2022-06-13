@@ -16,7 +16,7 @@
     </div>
 
     <h1 style="text-align: center; text-decoration: underline;">Add New Product</h1> <br>
-    <form action="AddHandler.jsp">
+    <form action="Controller/AddHandler.jsp">
         <Table class="Table">
             <tr>
                 <td>Name</td>

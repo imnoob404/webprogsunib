@@ -52,7 +52,7 @@
             
         %>
 
-        <form action="CartDeleteHandler.jsp">
+        <form action="Controller/CartDeleteHandler.jsp">
             <tr>
                 <td>
                     <img onerror="this.onerror=null; this.src='Assets/Product/ComingSoon.jpg'" src="Assets/Product/<%= rs2.getString("name")%>.jpg"
