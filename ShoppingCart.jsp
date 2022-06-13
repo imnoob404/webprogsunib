@@ -55,7 +55,7 @@
         <form action="CartDeleteHandler.jsp">
             <tr>
                 <td>
-                    <img src="Assets/Product/<%= rs2.getInt("id")%>.jpg"
+                    <img src="Assets/Product/<%= rs2.getString("name")%>.jpg"
                             width="150"
                             height="150">        
                 </td>

@@ -28,7 +28,7 @@
                 
             %>
 
-            <img src="Assets/Product/<%= rs.getInt("id")%>.jpg"
+            <img src="Assets/Product/<%= rs.getString("name")%>.jpg"
                 width="250"
                 height="250"
                 class="Detail_Image">
