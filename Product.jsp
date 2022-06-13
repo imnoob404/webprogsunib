@@ -89,6 +89,17 @@
                     </div>
 
                 <% } %>   
+
+                    <div class="item">
+                        <a href="AddProduct.jsp">
+                            <img onerror="this.onerror=null; this.src='Assets/Product/ComingSoon.jpg'" src="Assets/Product/add.jpg"
+                                width="250"
+                                height="250">
+                            <p> Add New Product </p>
+                            <p> Click Me </p>
+                        </a>
+                        
+                    </div>
             </div>
 
         </div>
