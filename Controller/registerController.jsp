@@ -7,7 +7,7 @@
     String phone = request.getParameter("phone");
     String date = request.getParameter("dob");
 
-    String query = String.format("INSERT INTO account (username, password, email, phone, dob) VALUES ('%s','%s','%s','%s','%s')", username, password, email, phone, date);
+    String query = String.format("INSERT INTO account (username, password, email, phone, dob, image) VALUES ('%s','%s','%s','%s','%s', pipel)", username, password, email, phone, date);
 
     st.executeUpdate(query);
     response.sendRedirect("/login.jsp");
