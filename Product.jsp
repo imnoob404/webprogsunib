@@ -1,25 +1,13 @@
-<%@ include file="header.jsp" %>
 <%@include file="Connect/connect.jsp"%>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Product.css">
-    
-    <title>Product</title>
-    
-</head>
-<body>
-
+<%@ include file="header.jsp" %>
+    <link rel="stylesheet" property="stylesheet" href="CSS/Product.css">
+    <div class="prodcontainer">
     <div class="temp">
         <div class="column left">
-            <a href="Product.jsp?category=Food" class="menu">Foods</a> <br>
-            <a href="Product.jsp?category=Toy / Utility" class="menu">Toy / Utility</a> <br>
-            <a href="Product.jsp?category=HealthCare" class="menu">Healthcare</a> <br>
-            <a href="Product.jsp" class="menu"> All </a>
+            <a class="prod" href="Product.jsp?category=Food" class="menu">Foods</a> <br>
+            <a class="prod" href="Product.jsp?category=Toy / Utility" class="menu">Toy / Utility</a> <br>
+            <a class="prod" href="Product.jsp?category=HealthCare" class="menu">Healthcare</a> <br>
+            <a class="prod" href="Product.jsp" class="menu"> All </a>
         </div>
 
         <input type="hidden" id="category" value="">
@@ -75,7 +63,7 @@
                     
 
                     <div class="item">
-                        <a href="DetailProduct.jsp?ID=<%= rs.getInt("id") %>">
+                        <a class="prod" href="DetailProduct.jsp?ID=<%= rs.getInt("id") %>">
                             <img onerror="this.onerror=null; this.src='Assets/Product/ComingSoon.jpg'" src="Assets/Product/<%= rs.getString("name")%>.jpg"
                                 width="250"
                                 height="250">
@@ -103,7 +91,7 @@
                 %>   
                 
                     <div class="item">
-                        <a href="AddProduct.jsp">
+                        <a class="prod" href="AddProduct.jsp">
                             <img onerror="this.onerror=null; this.src='Assets/Product/ComingSoon.jpg'" src="Assets/Product/add.jpg"
                                 width="250"
                                 height="250">
@@ -118,9 +106,6 @@
         </div>
 
     </div>
-
+    </div>
     <%@ include file="footer.jsp" %>
     
-
-</body>
-</html>

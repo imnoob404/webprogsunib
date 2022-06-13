@@ -37,13 +37,13 @@
               <%
                   if(session.getAttribute("user_username") == null){
               %>
-              <a href="login.jsp" class="get-started-btn scrollto">Login/Register</a>
+              <a href="login.jsp" class="loginreg scrollto">Login/Register</a>
 
               <%
                   }else{
               %>
 
-              <a href="profile.jsp" class="get-started-btn scrollto"><%out.println(session.getAttribute("user_username"));%></a>
+              <a href="profile.jsp" class="loginreg scrollto"><%out.println(session.getAttribute("user_username"));%></a>
 
               <%
                   }

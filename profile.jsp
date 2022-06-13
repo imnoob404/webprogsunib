@@ -1,16 +1,8 @@
-<%@ include file="header.jsp" %>
 <%@include file="Connect/connect.jsp" %>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/profile.css">
-    <title>Profile</title>
-</head>
-<body>
+<%@ include file="header.jsp" %>
 
+
+<link rel="stylesheet" href="CSS/profile.css">
     <%
         String username = session.getAttribute("user_username").toString();
         String query = String.format("SELECT * FROM account WHERE username = '%s'", username);
@@ -21,7 +13,7 @@
     <div class="profile">
 
         <div class="img_avatar">
-            <img src="Assets/Profile_Pic/<%= rs.getString("image")%>.jpg" id="getImage">
+            <img id="profimg" src="Assets/Profile_Pic/<%= rs.getString("image")%>.jpg" id="getImage">
             <br>
             <form action="Controller/ProfilePicHandler.jsp?">
                 <input type="hidden" name="name" value="<%=rs.getString("username")%>">
@@ -50,7 +42,5 @@
 
         <a href="logout.jsp">Logout</a>
     </div>
-</body>
 
 <%@ include file="footer.jsp" %>
-</html>

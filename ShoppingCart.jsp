@@ -1,17 +1,7 @@
-<%@ include file="header.jsp" %>
 <%@include file="Connect/connect.jsp"%>
+<%@ include file="header.jsp" %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/Cart.css">
-
-    <title>Cart</title>
-</head>
-<body>
+    <link rel="stylesheet" property="stylesheet" href="CSS/Cart.css">
     <%
         String query = "SELECT COUNT(*) FROM cart";
         ResultSet count = st.executeQuery(query);
@@ -25,7 +15,7 @@
         }
 
     %>
-   
+   <div class="container">
     <table class="table">
         <tr>
             <th>Produk</th>
@@ -107,7 +97,7 @@
     <form action="Payment.jsp">
         <input type="submit" value="CheckOut" class="button">
     </form>
-
+</div>
     <script>
         function PriceHandler(id){
             
@@ -128,7 +118,6 @@
 
 
     </script>
+    
 
 <%@ include file="footer.jsp" %>
-</body>
-</html>

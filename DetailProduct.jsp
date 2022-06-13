@@ -1,18 +1,8 @@
-<%@ include file="header.jsp" %>
 <%@include file="Connect/connect.jsp"%>
+<%@ include file="header.jsp" %>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/DetailProduct.css">
 
-    <title>Nama Produk</title>
-
-</head>
-<body>
+ <link rel="stylesheet" property="stylesheet" href="CSS/DetailProduct.css">
     <div class="Detail_Product">
         
 
@@ -44,7 +34,7 @@
                 <button type="button" onclick="plus()">+</button>
                 <br><br><br>
 
-                <input type="submit" value="Add To Cart">
+                <input type="submit" value="Add To Cart" class="loginreg scrollto">
 
                 
 
@@ -56,10 +46,8 @@
         <div class="Description">
             <p><%= rs.getString("description") %>
             </p>
-            
-        </div>  
-
-    </div>
+        </div>
+    </div>  
 
     <script>
         function minus() {
@@ -73,10 +61,4 @@
     </script>
 
 
-
-    
-    
-
-</body>
-    
-</html>
+<%@ include file="footer.jsp" %>
