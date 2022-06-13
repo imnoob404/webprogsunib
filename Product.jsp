@@ -76,6 +76,9 @@
                             <p>  <%= rs.getString("name") %> </p>
                             <p>  Rp. <%= rs.getInt("price") %> </p>
                         </a>
+                    <%
+                    if(session.getAttribute(user_username)=="admin"){
+                    %>
                         <form action="EditProduct.jsp">
                             <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
                             <input type="submit" value="Edit">
@@ -87,9 +90,12 @@
                         
                 
                     </div>
+                    <%}%>
 
-                <% } %>   
-
+                <% }
+                if(session.getAttribute(user_username)=="admin"){
+                %>   
+                
                     <div class="item">
                         <a href="AddProduct.jsp">
                             <img onerror="this.onerror=null; this.src='Assets/Product/ComingSoon.jpg'" src="Assets/Product/add.jpg"
@@ -100,6 +106,7 @@
                         </a>
                         
                     </div>
+                <%}%>
             </div>
 
         </div>
