@@ -77,7 +77,7 @@
                             <p>  Rp. <%= rs.getInt("price") %> </p>
                         </a>
                     <%
-                    if(session.getAttribute(user_username)=="admin"){
+                    if(session.getAttribute("user_username")=="admin"){
                     %>
                         <form action="EditProduct.jsp">
                             <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
@@ -93,7 +93,7 @@
                     <%}%>
 
                 <% }
-                if(session.getAttribute(user_username)=="admin"){
+                if(session.getAttribute("user_username")=="admin"){
                 %>   
                 
                     <div class="item">
