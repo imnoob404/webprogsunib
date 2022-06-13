@@ -12,7 +12,8 @@
 <body>
 
     <%
-        String query = "SELECT * FROM account WHERE username = 'admin2'";
+        String username = session.getAttribute("user_username");
+        String query = String.format("SELECT * FROM account WHERE username = '%s'", username);
         ResultSet rs = st.executeQuery(query);
         rs.next();
     
@@ -22,7 +23,7 @@
         <div class="img_avatar">
             <img src="Assets/Profile_Pic/<%= rs.getString("image")%>.jpg" id="getImage">
             <br>
-            <form action="ProfilePicHandler.jsp?">
+            <form action="Controller/ProfilePicHandler.jsp?">
                 <input type="hidden" name="name" value="<%=rs.getString("username")%>">
                 <input type="submit" value="Change Image">
             </form>

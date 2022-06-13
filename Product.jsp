@@ -83,7 +83,7 @@
                             <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
                             <input type="submit" value="Edit">
                         </form>
-                        <form action="ProductDeleteHandler.jsp">
+                        <form action="Controller/ProductDeleteHandler.jsp">
                             <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
                             <input type="submit" value="Delete">
                         </form>
