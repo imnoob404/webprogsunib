@@ -18,7 +18,8 @@
         <div class="column left">
             <a href="Product.jsp?category=Food" class="menu">Foods</a> <br>
             <a href="Product.jsp?category=Toy / Utility" class="menu">Toy / Utility</a> <br>
-            <a href="Product.jsp?category=HealthCare" class="menu">Healthcare</a>
+            <a href="Product.jsp?category=HealthCare" class="menu">Healthcare</a> <br>
+            <a href="Product.jsp" class="menu"> All </a>
         </div>
 
         <input type="hidden" id="category" value="">

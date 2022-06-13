@@ -8,6 +8,15 @@
     width: 75%;
 }
 
+div.left{
+    background-color: gray;
+    width: 25%;
+    position: sticky;
+    top: 0;
+    height: 900px;
+    margin-top: 50px;
+}
+
 /* .row{
     margin-left: 450px;
 } */
@@ -19,13 +28,6 @@
     text-align: center;
 }
 
-div.left{
-    background-color: gray;
-    width: 25%;
-    position: sticky;
-    top: 0;
-    height: 900px;
-}
 
 .temp:after {
     content: "";
@@ -43,11 +45,11 @@ a:link, a:visited {
     border: 4px solid black;
   }
   
-  a:hover, a:active {
+a:hover, a:active {
     background-color: grey;
-  }
+}
 
-  a.menu{
+a.menu{
     background-color: blue;
     margin: 10px 10px 10px 10px;
-  }
+}
