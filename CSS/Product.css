@@ -12,6 +12,11 @@
     margin-top: 50px;
     margin-left: 100px;
     padding: 5px;
+    background-color: gray;
+    width: 25%;
+    position: sticky;
+    top: 0;
+    height: 900px;
 }
 
 /* .row{
@@ -25,13 +30,13 @@
     text-align: center;
 }
 
-div.left{
+/* div.left{
     background-color: gray;
     width: 25%;
     position: sticky;
     top: 0;
     height: 900px;
-}
+} */
 
 .temp:after {
     content: "";
