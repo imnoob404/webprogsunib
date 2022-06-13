@@ -516,29 +516,54 @@ section {
 .section-title h2 {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 20px;
   padding-bottom: 20px;
+  text-align: center;
   position: relative;
 }
-.section-title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 3px;
-  background: #009961;
-  bottom: 0;
-  left: 0;
-}
+
 .section-title p {
   margin-bottom: 0;
   color: #777777;
   font-size: 15px;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
+.about {
+  width: 100%;
+  /* height: 50vh; */
+  background: url("../Assets/bg3.jpg") center center;
+  background-size: cover;
+  position: relative;
+}
+.about:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.about {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.about h2 {
+  color: #fff;
+}
+
+.about p {
+  color: #eee;
+  text-align: center;
+  font-size: 18px;
+  font-style: italic;
+}
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -601,7 +626,7 @@ section {
 .services .icon-box .icon {
   width: 64px;
   height: 64px;
-  background: #009961;
+  background: #eb17ba;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -1024,6 +1049,23 @@ section {
 # Faq
 --------------------------------------------------------------*/
 .faq {
+  width: 100%;
+  /* height: 50vh; */
+  background: url("../Assets/bg2.jpg") center center;
+  background-size: cover;
+  position: relative;
+}
+.faq:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.faq {
   padding: 0;
 }
 .faq .content {
@@ -1040,8 +1082,13 @@ section {
 }
 .faq .content p {
   font-size: 15px;
-  color: #848484;
+  color: #eee;
 }
+
+.faq h3{
+  color: #fff;
+}
+
 .faq .img {
   background-size: cover;
   background-repeat: no-repeat;
@@ -1107,11 +1154,6 @@ section {
   }
 }
 @media (max-width: 992px) {
-  .faq {
-    /* img {
-      padding-top: 30px;
-    } */
-  }
   .faq .content {
     padding-top: 30px;
   }
@@ -1129,7 +1171,7 @@ section {
 }
 .contact .info i {
   font-size: 32px;
-  color: #009961;
+  color: #eb17ba;
   float: left;
   line-height: 1;
 }
@@ -1146,9 +1188,7 @@ section {
   font-size: 14px;
   color: #5b5b5b;
 }
-.contact .info .email, .contact .info .phone {
-  margin-top: 40px;
-}
+
 .contact .php-email-form {
   width: 100%;
   background: #fff;
