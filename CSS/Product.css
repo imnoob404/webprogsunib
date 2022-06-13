@@ -43,11 +43,15 @@ a:link, a:visited {
     border: 4px solid black;
   }
   
-  a:hover, a:active {
+a:hover, a:active {
     background-color: grey;
-  }
+}
 
-  a.menu{
+a.menu{
     background-color: blue;
     margin: 10px 10px 10px 10px;
-  }
+}
+
+.column.left{
+    margin-top: 100px;
+}
