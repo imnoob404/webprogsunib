@@ -12,7 +12,7 @@
 <body>
 
     <%
-        String username = session.getAttribute("user_username");
+        String username = session.getAttribute("user_username").toString();
         String query = String.format("SELECT * FROM account WHERE username = '%s'", username);
         ResultSet rs = st.executeQuery(query);
         rs.next();
