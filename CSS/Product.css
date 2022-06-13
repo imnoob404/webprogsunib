@@ -8,7 +8,7 @@
     width: 75%;
 }
 
-.left{
+div.left{
     background-color: gray;
     width: 25%;
     position: sticky;
