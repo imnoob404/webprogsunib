@@ -1,4 +1,4 @@
-<%@include file="Connect/connect.jsp"%>
+<%@include file="/Connect/connect.jsp"%>
 
 <%
     Integer id = Integer.parseInt(request.getParameter("id"));

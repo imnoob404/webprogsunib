@@ -1,4 +1,4 @@
-<%@include file="Connect/connect.jsp"%>
+<%@include file="/Connect/connect.jsp"%>
 
 <%
     int qty = Integer.parseInt(request.getParameter("quantity"));
