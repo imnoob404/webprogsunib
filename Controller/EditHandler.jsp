@@ -11,5 +11,5 @@
     String query = String.format("UPDATE product SET name = '%s', category = '%s', description = '%s', price = %d WHERE name = '%s'", name, category, desc, price, oldname);
     st.executeUpdate(query);
 
-    response.sendRedirect("Product.jsp");
+    response.sendRedirect("/Product.jsp");
 %>

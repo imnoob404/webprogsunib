@@ -20,5 +20,5 @@
     query = String.format("INSERT INTO cart (name, quantity, price) VALUES ('%s', %d, %d)", nama, qty, total);
     st.executeUpdate(query);
 
-    response.sendRedirect("Product.jsp");
+    response.sendRedirect("/Product.jsp");
 %>

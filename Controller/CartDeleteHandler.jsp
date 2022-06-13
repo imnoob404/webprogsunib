@@ -12,5 +12,5 @@
     query = "ALTER TABLE cart ADD id INT PRIMARY KEY AUTO_INCREMENT FIRST";
     st.executeUpdate(query);
 
-    response.sendRedirect("ShoppingCart.jsp");
+    response.sendRedirect("/ShoppingCart.jsp");
 %>
