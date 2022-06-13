@@ -8,6 +8,10 @@
     width: 75%;
 }
 
+.left{
+    margin-top: 100px;
+}
+
 /* .row{
     margin-left: 450px;
 } */
@@ -50,8 +54,4 @@ a:hover, a:active {
 a.menu{
     background-color: blue;
     margin: 10px 10px 10px 10px;
-}
-
-.column.left{
-    margin-top: 100px;
 }
