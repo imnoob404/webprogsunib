@@ -9,9 +9,6 @@
 }
 
 .left{
-    margin-top: 50px;
-    margin-left: 100px;
-    padding: 5px;
     background-color: gray;
     width: 25%;
     position: sticky;
