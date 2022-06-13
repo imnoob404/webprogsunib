@@ -88,9 +88,9 @@
                             <input type="submit" value="Delete">
                         </form>
                         
-                
-                    </div>
                     <%}%>
+                    </div>
+                    
 
                 <% }
                 if(session.getAttribute("user_username")=="admin"){
