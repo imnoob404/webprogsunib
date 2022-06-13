@@ -69,13 +69,14 @@
 
                     <div class="item">
                         <a href="DetailProduct.jsp?ID=<%= rs.getInt("id") %>">
-                            <img src="Assets/Product/<%= rs.getString("name")%>.jpg"
+                            <img onerror="this.onerror=null; this.src='Assets/Product/ComingSoon.jpg'" src="Assets/Product/<%= rs.getString("name")%>.jpg"
                                 width="250"
                                 height="250">
                             <p>  <%= rs.getString("name") %> </p>
                             <p>  Rp. <%= rs.getInt("price") %> </p>
                         </a>
                         <form action="EditProduct.jsp">
+                            <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
                             <input type="submit" value="Edit">
                         </form>
                         <form action="ProductDeleteHandler.jsp">

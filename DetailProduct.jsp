@@ -28,7 +28,7 @@
                 
             %>
 
-            <img src="Assets/Product/<%= rs.getString("name")%>.jpg"
+            <img onerror="this.onerror=null; this.src='Assets/Product/ComingSoon.jpg'" src="Assets/Product/<%= rs.getString("name")%>.jpg"
                 width="250"
                 height="250"
                 class="Detail_Image">
