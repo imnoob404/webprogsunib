@@ -30,6 +30,12 @@
             <%
                 String query;
                 String category;
+                String currentAcc;
+                if(session.getAttribute("user_username")!=null){
+                    currentAcc = (String)session.getAttribute("user_username");
+                }else{
+                    currentAcc = "";
+                }
                 if(request.getParameter("category") != null){
                     category = request.getParameter("category");
                     query = String.format("SELECT  COUNT(*) FROM product WHERE category = '%s'", category);
@@ -77,7 +83,7 @@
                             <p>  Rp. <%= rs.getInt("price") %> </p>
                         </a>
                     <%
-                    if(session.getAttribute("user_username")=="admin"){
+                    if(currentAcc.equals("admin")){
                     %>
                         <form action="EditProduct.jsp">
                             <input type="hidden" name="id" value="<%=rs.getInt("id")%>">
@@ -93,7 +99,7 @@
                     
 
                 <% }
-                if(session.getAttribute("user_username")=="admin"){
+                if(currentAcc.equals("admin")){
                 %>   
                 
                     <div class="item">
