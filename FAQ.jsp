@@ -1,120 +1,134 @@
 <%@ include file="header.jsp" %>
-    <div class="container containermain">
-    <link rel="stylesheet" property="stylesheet" href="CSS/faq.css">
-    <div class="about_us">
-        <h1>About Us</h1>
-        <br>
-        <p class="about_us_text">
-            Toko beroperasi pukul 19:00-23:59 WIB. Pesanan yang lewat pukul 23:59 akan diproses saat toko beroperasi kembali.
-        </p>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="row content">
+                <div class="col-lg">
+                    <p>
+                        FantasyPet merupakan toko yang menjual berbagai perlengkapan makanan maupun healthcare untuk
+                        peliharaan anda.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    </div>
-    <div class="contact">
-        <h1>Contact Us</h1>
-        <div class="column">
-            <h2>Email</h2>
-            <p>fantasy.pet@gmail.com</p>
+    <section id="contact" class="contact">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>Contact</h2>
+                <p>Anda dapat menghubungi kami melalui email, telepon, maupun datang langsung ke alamat kami.</p>
+            </div>
         </div>
 
-        <div class="column">
-            <h2>Phone Number</h2>
-            <p>0898-9090-896</p>
-        </div>
+        <div class="container">
 
-        <div class="column">
-            <h2>Address</h2>
-            <p>Jl. Komp. Dpr II No.7, RT.3/RW.13, Kemanggisan, Kec. Palmerah, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11480</p>
-        </div>
-    </div>
+            <div class="row mt-5">
 
-    <div class="faq">
-        <h1>FAQ</h1>
-        <div class="option_pick" onclick="dropdown()">
-            <p>Q1: Di sini jual apa saja min?</p>
-        </div>
-    
-        <div class="dropdown_menu" id="dropdown_menu">
-            <p>Makanan, obat, mainan dan peralatan untuk anjing dan kucing.</p>
-        </div>
-    
-        <div class="option_pick" onclick="dropdown2()">
-            <p>Q2: Apakah pengiriman bisa keluar kota? </p>
-        </div>
+                <div class="col">
+                    <div class="info">
+                        <i class='bx bx-location-plus bx-tada'></i>
+                        <h4>Address</h4>
+                        <p>Jl. Komp. Dpr II No.7, RT.3/RW.13, Kemanggisan, Kec. Palmerah, Kota Jakarta Barat, Daerah
+                            Khusus Ibukota Jakarta 11480</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="info">
+                        <i class='bx bxs-envelope bx-tada'></i>
+                        <h4>Email</h4>
+                        <p>fantasy.pet@gmail.com</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="info">
+                        <i class='bx bx-phone bx-tada'></i>
+                        <h4>Phone Number</h4>
+                        <p>0898-9090-896</p>
 
-        <div class="dropdown_menu" id="dropdown_menu2">
-            <p>Pengiriman dapat dikirim ke seluruh Indonesia.</p>
+                    </div>
+
+                </div>
+
+            </div>
+    </section>
+    <section id="faq" class="faq">
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+                    <div class="content">
+                        <h3>Frequently Asked <strong>Questions</strong></h3>
+                        <p>
+                            Pertanyaan yang paling sering ditanyakan
+                        </p>
+                    </div>
+
+                    <div class="accordion-list">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left" type="button"
+                                            data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Q1: Di sini jual apa saja min?
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Makanan, obat, mainan dan peralatan untuk anjing dan kucing.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">
+                                            Q2: Apakah pengiriman bisa keluar kota?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Pengiriman dapat dikirim ke seluruh Indonesia.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                            data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">
+                                            Q3: Apakah barang yang rusak dapat dilakukan refund?
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                    data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        Jika rusak dalam pengiriman maka bukan tanggung jawab kami lagi.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    
-        <div class="option_pick" onclick="dropdown3()">
-            <p>Q3: Apakah barang yang rusak dapat dilakukan refund?</p>
-        </div>
+    </section>
 
-        <div class="dropdown_menu" id="dropdown_menu3">
-            <p>Jika rusak dalam pengiriman maka bukan tanggung jawab kami lagi.</p>
-        </div>
-
-    </div>
-
-    <script>
-        function dropdown() {
-            document.getElementById("dropdown_menu").classList.toggle("show");
-        }
-      
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.option_pick')) {
-                var dropdowns = document.getElementsByClassName("dropdown-dropdown_menu");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    
-                    var openDropdown = dropdowns[i];
-                    
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-
-        function dropdown2() {
-            document.getElementById("dropdown_menu2").classList.toggle("show");
-        }
-      
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.option_pick')) {
-                var dropdowns = document.getElementsByClassName("dropdown-dropdown_menu");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    
-                    var openDropdown = dropdowns[i];
-                    
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-
-        function dropdown3() {
-            document.getElementById("dropdown_menu3").classList.toggle("show");
-        }
-      
-        // Close the dropdown menu if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.option_pick')) {
-                var dropdowns = document.getElementsByClassName("dropdown-dropdown_menu");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    
-                    var openDropdown = dropdowns[i];
-                    
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
-</div>
 <%@ include file="footer.jsp" %>
