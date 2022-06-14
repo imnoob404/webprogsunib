@@ -3,7 +3,7 @@
     <link rel="stylesheet" property="stylesheet" href="CSS/Product.css">
     <div class="prodcontainer">
     <div class="temp">
-        <div class="column left">
+        <div class="column prodsidebar">
             <a class="prod" href="Product.jsp?category=Food" class="menu">Foods</a> <br>
             <a class="prod" href="Product.jsp?category=Toy / Utility" class="menu">Toy / Utility</a> <br>
             <a class="prod" href="Product.jsp?category=HealthCare" class="menu">Healthcare</a> <br>
