@@ -5,7 +5,7 @@
         <div class="col-xl">
           <h1>Solusi kebutuhan hewan peliharaan anda</h1>
           <h2>Kami punya semua yang anda butuhkan dengan harga terjangkau</h2>
-          <a href="Product.jsp" class="glightbox play-btn mb-4"></a>
+          <a href="Product.jsp" class="play-btn mb-4"></a>
         </div>
       </div>
     </div>
