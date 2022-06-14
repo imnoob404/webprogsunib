@@ -25,7 +25,7 @@
                         <br>
                         <input type="date" name="dob" placeholder="DOB" required> <br>
                         <br>
-                        <input type="submit" name="simpan" value="Register">
+                        <input type="submit" name="simpan" value="Register" class="button">
             
                     </form>
                 </div>

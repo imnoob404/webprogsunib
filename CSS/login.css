@@ -30,15 +30,18 @@
 }
 
 .link_register:hover{
-    color: gray;
+    color: white;
 }
 
 .img_logo{
-    margin-top: 15px;
     width: 250px;
     height: 300px;
-    margin-left: auto;
+    margin-left: 10px;
     margin-right: auto;
+}
+
+p.form_login{
+    font-size: 16px;
 }
 
 .logo{
@@ -55,6 +58,18 @@
 
 .form.form_login p{
     font-size: 16px;
+}
+
+.button{
+    background-color: #c51bab;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 

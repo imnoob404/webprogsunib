@@ -12,7 +12,7 @@
     
         <div class="form">
             <div class="form_login">    
-                <p>Login</p>
+                <p style="font-size: 24px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Login</p>
                 <br>
                 <br>
                 <form action="Controller/loginController.jsp" method="post">
@@ -21,9 +21,7 @@
                     <br>
                     <input type="password" name="password" placeholder="Password" required> <br>
                     <br>
-                    <br>
-                    <input type="submit" name="login" value="Login">
-                    <br>
+                    <input type="submit" name="login" value="Login" class="button">
                     <br>
                     <br>
                     <a href="register.jsp" class="link_register">Ga punya akun? Register dong</a>
