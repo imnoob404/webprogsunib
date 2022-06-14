@@ -13,7 +13,7 @@
         
             <div class="form">
                 <div class="form_register">    
-                    <p>Register</p>
+                    <p style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Register</p>
                     <form action="Controller/registerController.jsp" method="post">
                         <input type="text" name="username" placeholder="Username" required> <br>
                         <br>
