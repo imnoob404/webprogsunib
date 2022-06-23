@@ -1,4 +1,4 @@
-<%@include file="/Connect/connect.jsp" %>
+<%@include file="../Connect/connect.jsp" %>
 
 <%
     String username = request.getParameter("username");
@@ -16,5 +16,5 @@
     }
     
     
-    response.sendRedirect("/index.jsp");
+    response.sendRedirect("../index.jsp");
 %>

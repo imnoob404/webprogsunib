@@ -1,4 +1,4 @@
-<%@include file="/Connect/connect.jsp"%>
+<%@include file="../Connect/connect.jsp" %>
 
 <%
     String name = request.getParameter("name");
@@ -25,5 +25,5 @@
     query = String.format("UPDATE account SET image = '%s' WHERE username = '%s'", image, name);
     st.executeUpdate(query);
 
-    response.sendRedirect("/profile.jsp");
+    response.sendRedirect("../profile.jsp");
 %>

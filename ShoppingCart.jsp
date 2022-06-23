@@ -3,7 +3,8 @@
 
     <link rel="stylesheet" property="stylesheet" href="CSS/Cart.css">
     <%
-        String query = "SELECT COUNT(*) FROM cart";
+        String User_id = session.getAttribute("user_id").toString();
+        String query = String.format("SELECT COUNT(*) FROM cart WHERE User_id = '%s'", User_id);
         ResultSet count = st.executeQuery(query);
 
         ResultSet rs= null, rs2= null;
@@ -27,18 +28,10 @@
         </tr>
         <% 
             Integer total = 0;
+            query = String.format("SELECT * FROM cart WHERE User_id = '%s'", User_id);
+            rs2 = st.executeQuery(query);
 
-            for(int i=1 ; i<=totalData ; i++){ 
-                
-                query = String.format("SELECT * FROM cart WHERE id = %d", i);
-                
-                rs = st.executeQuery(query);
-                rs.next();
-
-                String name = rs.getString("name");
-                String query2 = String.format("SELECT * FROM product WHERE name = '%s'", name);
-                rs2 = st.executeQuery(query2);
-                rs2.next();
+            while(rs2.next()){
             
         %>
 
@@ -49,21 +42,17 @@
                             width="150"
                             height="150">        
                 </td>
-                <%
-                    rs = st.executeQuery(query);
-                    rs.next();
-                %>
                 <td> 
-                    <input type="text" name="name" readonly style="border: none;" value="<%= rs.getString("name") %>">
+                    <input type="text" name="name" readonly style="border: none;" value="<%= rs2.getString("name") %>">
                 </td>
                 <td> 
-                    <input type="number" id="qty<%=i%>" onchange="PriceHandler(<%=i%>)" style="width: 50px;" min="1" value="<%= rs.getInt("quantity") %>">
+                    <input type="number" id="qty<%=rs2.getInt("id")%>" onchange="PriceHandler(<%=rs2.getInt("id")%>)" style="width: 50px;" min="1" value="<%= rs2.getInt("quantity") %>">
                     
                 </td>
 
                 <td> Rp. 
-                    <input type="number" id="price<%=i%>" style="width: 120px; border: none;" readonly value="<%= rs.getInt("price") %>">
-                    <input type="hidden" id="baseprice<%=i%>" value="<%= rs.getInt("price") %>">
+                    <input type="number" id="price<%=rs2.getInt("id")%>" style="width: 120px; border: none;" readonly value="<%= rs2.getInt("price")* rs2.getInt("quantity")%>">
+                    <input type="hidden" id="baseprice<%=rs2.getInt("id")%>" value="<%= rs2.getInt("price") %>">
                 </td>
                 <td> 
                     
@@ -76,7 +65,7 @@
         </form>
 
         <%      
-                total+=rs.getInt("price");
+                total+=rs2.getInt("price");
             } 
         %>
         

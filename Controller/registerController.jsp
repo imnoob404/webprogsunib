@@ -1,4 +1,4 @@
-<%@include file="/Connect/connect.jsp"%>
+<%@include file="../Connect/connect.jsp" %>
 
 <%
     String username = request.getParameter("username");
@@ -11,5 +11,5 @@
     String query = String.format("INSERT INTO account (username, password, email, phone, dob, image) VALUES ('%s','%s','%s','%s','%s', '%s')", username, password, email, phone, date, image);
 
     st.executeUpdate(query);
-    response.sendRedirect("/login.jsp");
+    response.sendRedirect("../login.jsp");
 %>

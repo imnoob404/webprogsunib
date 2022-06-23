@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2022 at 07:39 AM
+-- Generation Time: Jun 23, 2022 at 08:58 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 8.0.7
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fantasypet`
+-- Database: `fantasy_pet`
 --
 
 -- --------------------------------------------------------
@@ -31,17 +31,18 @@ CREATE TABLE `cart` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `quantity` int(255) NOT NULL,
-  `price` int(255) NOT NULL
+  `price` int(255) NOT NULL,
+  `User_Id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `cart`
 --
 
-INSERT INTO `cart` (`id`, `name`, `quantity`, `price`) VALUES
-(1, '2in1 Backpack', 1, 65000),
-(2, 'Bolt Kitten', 3, 75000),
-(3, 'Bolt tuna - 900gr', 1, 19999);
+INSERT INTO `cart` (`id`, `name`, `quantity`, `price`, `User_Id`) VALUES
+(1, 'Albenworm', 1, 6000, 1),
+(2, 'Albenworm', 1, 6000, 2),
+(3, 'BODY Big Cat', 1, 35000, 1);
 
 --
 -- Indexes for dumped tables

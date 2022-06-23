@@ -7,6 +7,7 @@
     <title>
         FantasyPet - 
     <%
+    
         String servletPath=request.getServletPath();
         String judul = servletPath.substring(servletPath.lastIndexOf("/") + 1, servletPath.length() - 4);
         out.println(judul);
@@ -30,7 +31,14 @@
                 <ul>
                   <li><a class="nav-link scrollto <% if(judul.equals("index")) out.println("active"); %>" href="index.jsp">Home</a></li>
                   <li><a class="nav-link scrollto <% if(judul.equals("Product")) out.println("active"); %></a>" href="Product.jsp?">Shop</a></li>
-                  <li><a class="nav-link scrollto <% if(judul.equals("ShoppingCart")) out.println("active"); %></a>" href="ShoppingCart.jsp">Cart</a></li>
+                  <%
+                    if (session.getAttribute("user_id") == null){
+                  %>
+                        <li><a class="nav-link scrollto <% if(judul.equals("ShoppingCart")) out.println("active"); %></a>" href="login.jsp">Cart</a></li>
+                  <% } else { %>
+                        <li><a class="nav-link scrollto <% if(judul.equals("ShoppingCart")) out.println("active"); %></a>" href="ShoppingCart.jsp">Cart</a></li>
+                  <% } %>
+
                   <li><a class="nav-link scrollto <% if(judul.equals("FAQ")) out.println("active"); %></a>" href="FAQ.jsp">Contact</a></li>
                 </ul>
               </nav>

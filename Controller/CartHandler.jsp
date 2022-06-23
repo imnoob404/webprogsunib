@@ -1,6 +1,7 @@
-<%@include file="/Connect/connect.jsp"%>
+<%@include file="../Connect/connect.jsp" %>
 
 <%
+    String user_id = session.getAttribute("user_id").toString();
     int qty = Integer.parseInt(request.getParameter("quantity"));
     String i = request.getParameter("ID");
     ResultSet rs = null;
@@ -17,8 +18,8 @@
 
     
     
-    query = String.format("INSERT INTO cart (name, quantity, price) VALUES ('%s', %d, %d)", nama, qty, total);
+    query = String.format("INSERT INTO cart (name, quantity, price, User_id) VALUES ('%s', %d, %d, %s)", nama, qty, total, user_id);
     st.executeUpdate(query);
 
-    response.sendRedirect("/Product.jsp");
+    response.sendRedirect("../Product.jsp");
 %>
