@@ -26,17 +26,21 @@
             <div class="Text_Product">
                 <h1> <%= rs.getString("name") %> </h1>
                 <h2> Rp. <%= rs.getString("price") %>  </h2>
-                <button type="button" onclick="minus()">-</button>
-                
-                <input type="hidden" name="ID" value="<%= Integer.parseInt(request.getParameter("ID")) %>" >
 
-                <input type="number" min="1" value="1" id="quantity" name="quantity">
-                <button type="button" onclick="plus()">+</button>
-                <br><br><br>
+                <%
+                    if (session.getAttribute("user_username") != null ){ 
+                %>
+                    <button type="button" onclick="minus()">-</button>
+                    
+                    <input type="hidden" name="ID" value="<%= Integer.parseInt(request.getParameter("ID")) %>" >
 
-                <input type="submit" value="Add To Cart" class="loginreg scrollto">
+                    <input type="number" min="1" value="1" id="quantity" name="quantity">
+                    <button type="button" onclick="plus()">+</button>
+                    <br><br><br>
 
-                
+                    <input type="submit" value="Add To Cart" class="loginreg scrollto">
+
+                <% } %>
 
             </div>
 
