@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #444444;
 }
 
@@ -844,3 +844,24 @@ section {
 #footer .credits a:hover {
   color: #009961;
 }
+
+.product{
+  padding-top: 0;
+  padding-left: 2px;
+  height: 90vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+}
+
+.product::-webkit-scrollbar {
+  display: none;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+

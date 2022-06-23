@@ -13,7 +13,7 @@
         
             <div class="form">
                 <div class="form_register">    
-                    <p>Register</p>
+                    <p style="color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Register</p>
                     <form action="Controller/registerController.jsp" method="post">
                         <input type="text" name="username" placeholder="Username" required> <br>
                         <br>
@@ -25,7 +25,7 @@
                         <br>
                         <input type="date" name="dob" placeholder="DOB" required> <br>
                         <br>
-                        <input type="submit" name="simpan" value="Register">
+                        <input type="submit" name="simpan" value="Register" class="button">
             
                     </form>
                 </div>

@@ -5,13 +5,13 @@
     margin-left: auto;
     margin-right: auto;
     width: 550px;
-    height: 400px;
+    height: 425px;
     margin-top: 10em;
     margin-bottom: 10em;
 }
 
 .form_register{
-    background-color: white;
+    background-color: rgba(77, 72, 72, 0.566);
     width: 250px;
     height: 300px;
     margin-left: auto;
@@ -23,16 +23,15 @@
     color: aliceblue;
 }
 
-.link_register{
+/* .link_register{
     color: black;
 }
 
 .link_register:hover{
-    color: gray;
-}
+    color: green;
+} */
 
 .img_logo{
-    margin-top: 15px;
     width: 250px;
     height: 300px;
     margin-left: auto;
@@ -42,6 +41,7 @@
 .logo{
     text-align: center;
     float: left;
+    margin-left: 10px;
     /* width: 50%; */
 }
 
@@ -49,6 +49,18 @@
     text-align: center;
     float: right;
     width: 50%;
+}
+
+.button{
+    background-color: #c51bab;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 input::-webkit-outer-spin-button,
